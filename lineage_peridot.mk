@@ -14,6 +14,19 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
+# Axion stuffs
+AXION_CAMERA_REAR_INFO := 50,8
+AXION_CAMERA_FRONT_INFO := 20
+AXION_MAINTAINER := Drenzzz.
+AXION_PROCESSOR := Qualcomm_Snapdragon_8s_Gen_3
+AXION_CPU_SMALL_CORES := 0,1,2
+AXION_CPU_BIG_CORES := 3,4,5,6,7
+TARGET_ENABLE_BLUR := true
+TARGET_INCLUDES_LOS_PREBUILTS := true
+GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
+GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+TARGET_NEEDS_DOZE_FIX := true
+
 PRODUCT_NAME := lineage_peridot
 PRODUCT_DEVICE := peridot
 PRODUCT_MANUFACTURER := Xiaomi
@@ -24,8 +37,8 @@ PRODUCT_SYSTEM_NAME := peridot_global
 PRODUCT_SYSTEM_DEVICE := peridot
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.204.0.VNPMIXM release-keys" \
-    BuildFingerprint=POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.204.0.VNPMIXM:user/release-keys \
+    BuildDesc="peridot_global-user 15 AQ3A.240912.001 OS2.0.206.0.VNPMIXM release-keys" \
+    BuildFingerprint=POCO/peridot_global/peridot:15/AQ3A.240912.001/OS2.0.206.0.VNPMIXM:user/release-keys \
     DeviceName=$(PRODUCT_SYSTEM_DEVICE) \
     DeviceProduct=$(PRODUCT_SYSTEM_NAME)
 
