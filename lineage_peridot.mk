@@ -14,14 +14,25 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from peridot device
 $(call inherit-product, device/xiaomi/peridot/device.mk)
 
-# Axion stuffs
+# Flags
+TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_DISABLE_EPPE := true
+# Axion
+WITH_GMS := true
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_HAS_UDFPS := true
+EXTRA_UDFPS_ANIMATIONS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_ENABLE_BLUR := true
+
 AXION_CAMERA_REAR_INFO := 50,8
 AXION_CAMERA_FRONT_INFO := 20
-AXION_MAINTAINER := Drenzzz.
-AXION_PROCESSOR := Qualcomm_Snapdragon_8s_Gen_3
+AXION_MAINTAINER := BLU
+AXION_PROCESSOR := Snapdragon_8s_Gen_3
 AXION_CPU_SMALL_CORES := 0,1,2
 AXION_CPU_BIG_CORES := 3,4,5,6,7
-TARGET_ENABLE_BLUR := true
 TARGET_INCLUDES_LOS_PREBUILTS := true
 GPU_FREQS_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/available_frequencies
 GPU_MIN_FREQ_PATH := /sys/class/kgsl/kgsl-3d0/devfreq/min_freq

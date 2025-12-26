@@ -209,6 +209,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
+# GameBar Performance Overlay
+$(call inherit-product, packages/apps/GameBar/gamebar.mk) 
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -280,6 +282,9 @@ $(call soong_config_set,lineage_health,fast_charge_node,/sys/class/qcom-battery/
 $(call soong_config_set,lineage_health,fast_charge_value_none,0)
 $(call soong_config_set,lineage_health,fast_charge_value_fast_charge,1)
 $(call soong_config_set,lineage_health,fast_charge_value_super_fast_charge,2)
+
+# Lineage-Priv
+-include vendor/lineage-priv/keys/keys.mk
 
 # Media
 PRODUCT_COPY_FILES += \
