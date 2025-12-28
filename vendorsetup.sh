@@ -33,9 +33,6 @@ git clone https://github.com/sm8635-dev/vendor_xiaomi_peridot-miuicamera.git ven
 rm -rf packages/apps/XiaomiDolby
 git clone https://github.com/peridot-dev/android_packages_apps_XiaomiDolby.git packages/apps/XiaomiDolby
 
-rm -rf system/sepolicy
-git clone https://github.com/ryznstk/android_system_sepolicy.git system/sepolicy
-
 rm -rf device/qcom/sepolicy_vndr/sm8650
 git clone https://github.com/ryznstk/android_device_qcom_sepolicy_vndr.git device/qcom/sepolicy_vndr/sm8650
 
