@@ -45,6 +45,9 @@ git clone https://github.com/droidcore/packages_apps_GameBar.git packages/apps/G
 echo "Cloning FastCharge..."
 rm -rf packages/apps/FastCharge
 
+rm -rf system/sepolicy
+git clone https://github.com/ryznstk/android_system_sepolicy.git system/sepolicy
+
 # Refresh signing keys
 if [ -d vendor/lineage-priv/keys ]; then
   echo "Removing existing signing keys..."
