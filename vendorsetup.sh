@@ -23,7 +23,7 @@ git clone -b lineage-23.0 https://github.com/peridot-dev/android_hardware_xiaomi
 # MiuiCamera device tree (fresh clone)
 echo "Cloning MiuiCamera device tree..."
 rm -rf device/xiaomi/peridot-miuicamera
-git clone https://github.com/Blazing-Forest/device_xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
+git clone https://github.com/droidcore/xiaomi_peridot-miuicamera.git device/xiaomi/peridot-miuicamera
 
 # MiuiCamera vendor tree (fresh clone)
 echo "Cloning MiuiCamera vendor tree..."
